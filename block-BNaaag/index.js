@@ -1,8 +1,9 @@
-var {readFile, readFileSync} = require(`fs`);
-var val = readFileSync("./content.md",(error,content)=>console.log(error,content))
-console.log(val)
-var val1 = readFile("./content.md",(error,content)=>console.log(error,content))
-console.log(val1)
+var {readFile, readFileSync} = require('fs');
+readFile("./content.md",'utf8',(error,content)=>console.log(error,content)) //asynchronous
+
+var result = readFileSync("./content.md",'utf8')
+console.log(result)
+
 let bff = Buffer.alloc(10);
 bff.write("Hellooo Himanshu")
-console.log(bff)
+console.log(bff.toString())
