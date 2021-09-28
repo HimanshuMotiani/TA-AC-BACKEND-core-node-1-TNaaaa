@@ -10,12 +10,12 @@ function handleRequest(req,res){
         res.end()
     }
     else if( req.method == "GET" && parsedUrl.pathname == "/about"){
-        res.setHeader('Content-Type','text/html')
+        res.setHeader('Content-type','text/html')
         res.write('<h2>this is all about NodeJS</h2>')
         res.end();
     }
     else if(req.method == "POST" && parsedUrl.pathname == "/about")
-    res.setHeader('Content-Type','application/json')
+    res.setHeader('Content-type','application/json')
     res.write(`{message: this is a post request}`)
     res.end();
 }
