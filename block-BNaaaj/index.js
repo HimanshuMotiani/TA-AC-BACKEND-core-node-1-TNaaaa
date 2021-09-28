@@ -1,7 +1,6 @@
 var os = require("os")
-var fs = require("fs");
-fs.readFile('','utf8',()=>{})
-fs.unlink('',()=>{});
+var {readFile,unlink} = require("fs");
+
 console.log('Welcome to Nodejs');
 
 console.log(os.freemem());
